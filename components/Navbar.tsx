@@ -50,12 +50,11 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             className="flex items-center hover:opacity-90 transition-opacity group"
           >
             <div className="h-12 md:h-16 flex items-center py-1">
-              <img 
-                src="logo.png" 
-                alt="Sau Trust Logo" 
+              <img
+                src="/sau_trust_logo_-_purple.png"
+                alt="Sau Trust Logo"
                 className="h-full w-auto object-contain"
                 onError={(e) => {
-                  // Fallback to text if image not found
                   e.currentTarget.style.display = 'none';
                   const parent = e.currentTarget.parentElement;
                   if (parent && !parent.querySelector('.text-fallback')) {

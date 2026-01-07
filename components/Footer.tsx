@@ -35,13 +35,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       <div className="bg-white pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
           <div className="md:col-span-1">
-            <button 
+            <button
               onClick={() => onNavigate('home')}
               className="mb-8 hover:opacity-80 transition"
             >
-              <img 
-                src="logo.png" 
-                alt="Sau Trust Logo" 
+              <img
+                src="/sau_trust_logo_-_purple.png"
+                alt="Sau Trust Logo"
                 className="h-16 md:h-24 w-auto object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
