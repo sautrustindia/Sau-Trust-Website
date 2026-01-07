@@ -36,19 +36,19 @@ const ActivitiesPage: React.FC = () => {
       title: "Sunita's Journey to Independence",
       subtitle: "From struggle to successful entrepreneur",
       desc: "After losing her husband, Sunita faced immense financial pressure with two young children. Through Sau Trust's Employment program, she learned tailoring and received a sewing machine. Today, she runs her own boutique in her village, employing three other women. Her children are back in school, and she has regained her standing in the community. Sunita's story is a testament to the power of skill-building and resilience, showing that with the right support, new beginnings are possible.",
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
     },
     {
       title: "Breaking Barriers: Priya's Education",
       subtitle: "First graduate in the family",
       desc: "Priya, the daughter of a widowed farm laborer, dreamed of becoming a nurse but lacked the funds. Our Education initiative stepped in with a full scholarship covering her tuition and books. Despite societal pressure to marry early, Priya persisted. She recently graduated with distinction and now works at a district hospital. Her success has inspired other girls in her taluka to pursue higher education regardless of their circumstances, proving that education is the key to breaking the cycle of poverty.",
-      image: "https://images.unsplash.com/photo-1595475207225-428b62bda831?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop"
     },
     {
       title: "Finding Love Again",
       subtitle: "A story of second chances",
       desc: "Rukmini thought her life was over after her partner passed away. Isolated and depressed, she attended one of our Community Events where she met our counselors. Slowly, she opened up to the idea of remarriage. Through our vetted matching platform, she met a supportive partner. They recently celebrated their first anniversary. Rukmini now advocates for widow remarriage, challenging deep-seated taboos in her region and demonstrating that everyone deserves love and companionship.",
-      image: "https://images.unsplash.com/photo-1621644026330-81f725350c33?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop"
     }
   ];
 
@@ -132,11 +132,6 @@ const ActivitiesPage: React.FC = () => {
                     {story.desc}
                   </p>
                   
-                  <div className="pt-8">
-                     <button className="bg-black text-white px-10 py-4 rounded-full font-bold hover:bg-[#3818C1] transition shadow-lg flex items-center group">
-                       Read full story <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                     </button>
-                  </div>
                 </div>
               </div>
             ))}

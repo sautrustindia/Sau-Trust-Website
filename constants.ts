@@ -33,27 +33,27 @@ export const EVENTS: Event[] = [
 export const STORIES: Story[] = [
   {
     id: '1',
-    title: "Don Flint's Story",
-    date: 'October 20, 2017',
-    image: 'https://picsum.photos/seed/story1/400/500',
+    title: "Sunita's Transformation",
+    date: 'March 15, 2024',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop',
   },
   {
     id: '2',
-    title: "Lacey Tucker's story",
-    date: 'September 20, 2017',
-    image: 'https://picsum.photos/seed/story2/400/500',
+    title: "Priya's New Beginning",
+    date: 'February 28, 2024',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop',
   },
   {
     id: '3',
-    title: "I Can Do Hard Things",
-    date: 'September 6, 2017',
-    image: 'https://picsum.photos/seed/story3/400/500',
+    title: "Meena's Journey",
+    date: 'January 10, 2024',
+    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=400&auto=format&fit=crop',
   },
   {
     id: '4',
-    title: "Dr. Ed Hughes",
-    date: 'September 21, 2020',
-    image: 'https://picsum.photos/seed/story4/400/500',
+    title: "Divya's Dreams",
+    date: 'December 5, 2023',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop',
   },
 ];
 

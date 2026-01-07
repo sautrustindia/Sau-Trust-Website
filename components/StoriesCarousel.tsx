@@ -9,7 +9,6 @@ const StoriesCarousel: React.FC = () => {
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl font-semibold">Inspiring Stories</h2>
           <div className="hidden md:flex items-center space-x-3">
-             <button className="bg-black text-white px-5 py-2 rounded-full text-sm font-medium">See all</button>
              <button className="p-2 rounded-full border border-gray-300 hover:border-black transition">
                <ArrowLeft size={20} />
              </button>
@@ -44,9 +43,6 @@ const StoriesCarousel: React.FC = () => {
           ))}
         </div>
         
-        <div className="md:hidden mt-6 flex justify-center">
-             <button className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium w-full">See all</button>
-        </div>
       </div>
     </div>
   );
