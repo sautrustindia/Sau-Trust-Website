@@ -54,84 +54,71 @@ const ActivitiesPage: React.FC = () => {
 
   return (
     <div className="pt-20 bg-white">
-      {/* Hero - Light Theme */}
-      <div className="bg-white text-black py-24 md:py-40 px-6 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center space-x-4 mb-8">
-            <span className="w-12 h-[2px] bg-[#3818C1]"></span>
-            <span className="text-[#3818C1] font-bold tracking-widest text-sm uppercase">Impactful Work</span>
-          </div>
-          <h1 className="text-6xl md:text-9xl font-black mb-10 tracking-tighter leading-[0.9]">
-            Our <br/><span className="text-[#3818C1]">Activities</span>
+      {/* Hero */}
+      <div className="border-b border-gray-200 py-24 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-8 md:px-16">
+          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-gray-400 mb-8 block">
+            Our Work
+          </span>
+          <h1 className="text-[clamp(3rem,8vw,7rem)] leading-[0.95] font-bold tracking-tight mb-8">
+            Our<br />
+            <span className="text-[#3818C1]">Activities</span>
           </h1>
-          <p className="text-xl md:text-3xl max-w-4xl text-gray-500 leading-relaxed font-light">
+          <p className="text-[15px] leading-relaxed text-gray-600 max-w-2xl">
             We take a holistic approach to empowerment, addressing the social, economic, and emotional needs through five key pillars.
           </p>
         </div>
       </div>
 
-      {/* Section 1: Categories */}
-      <div className="py-24 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-black tracking-tight">Areas of Focus</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {categories.map((cat, idx) => (
-            <div key={idx} className="group bg-white rounded-[2rem] p-10 hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-[#3818C1]/20">
-              <div className="flex justify-between items-start mb-10">
-                <div className="text-6xl p-6 bg-gray-50 rounded-3xl group-hover:bg-[#3818C1] group-hover:text-white transition-all duration-500">{cat.icon}</div>
-                <div className="w-14 h-14 rounded-full border border-gray-100 flex items-center justify-center group-hover:bg-[#3818C1] group-hover:text-white transition-all duration-500">
-                   <ArrowRight className="w-6 h-6" />
-                </div>
+      {/* Categories */}
+      <div className="py-24 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-8 md:px-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((cat, idx) => (
+              <div key={idx} className="border border-gray-200 p-8 hover:border-[#3818C1] transition-colors group">
+                <div className="text-4xl font-bold text-[#3818C1] mb-6">0{idx + 1}</div>
+                <h3 className="text-2xl font-bold mb-4">{cat.title}</h3>
+                <p className="text-[13px] leading-relaxed text-gray-600">
+                  {cat.desc}
+                </p>
               </div>
-              
-              <h3 className="text-3xl font-bold text-black mb-5">{cat.title}</h3>
-              <p className="text-gray-500 leading-relaxed text-lg group-hover:text-gray-900 transition-colors">
-                {cat.desc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Section 2: Success Stories */}
-      <div className="bg-gray-50/50 py-32 px-6 border-y border-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black mb-32 text-black text-center tracking-tighter">Success Stories</h2>
-          
-          <div className="space-y-48">
+      {/* Success Stories */}
+      <div className="bg-gray-50 py-24 md:py-32 border-t border-gray-200">
+        <div className="max-w-[1400px] mx-auto px-8 md:px-16">
+          <div className="mb-16">
+            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-gray-400 mb-4 block">
+              Impact Stories
+            </span>
+            <h2 className="text-[clamp(2rem,5vw,4rem)] leading-[1.1] font-bold tracking-tight">
+              Success Stories
+            </h2>
+          </div>
+
+          <div className="space-y-24">
             {stories.map((story, idx) => (
-              <div key={idx} className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-20 md:gap-32 items-center group`}>
-                
-                {/* Image Side */}
-                <div className="w-full md:w-1/2">
-                  <div className="aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl relative">
-                    <div className="absolute inset-0 bg-[#3818C1]/0 group-hover:bg-[#3818C1]/5 transition-colors duration-500 z-10" />
-                    <img 
-                      src={story.image} 
-                      alt={story.title} 
-                      className="w-full h-full object-cover transform transition-transform duration-[2000ms] group-hover:scale-105"
+              <div key={idx} className="grid grid-cols-12 gap-8 items-center">
+                <div className="col-span-12 md:col-span-5">
+                  <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
+                    <img
+                      src={story.image}
+                      alt={story.title}
+                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                     />
                   </div>
                 </div>
 
-                {/* Text Side */}
-                <div className="w-full md:w-1/2 space-y-8">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <span className="w-16 h-[2px] bg-[#3818C1]"></span>
-                    <span className="text-[#3818C1] font-bold tracking-[0.3em] text-xs uppercase">Impact Case</span>
-                  </div>
-                  
-                  <h3 className="text-4xl md:text-5xl font-bold text-black leading-tight tracking-tight">
-                    {story.title}
-                  </h3>
-                  
-                  <p className="text-2xl font-medium text-[#3818C1]/60">
-                    {story.subtitle}
-                  </p>
-                  
-                  <p className="text-gray-600 leading-relaxed text-xl pt-4 font-light">
+                <div className="col-span-12 md:col-span-7">
+                  <div className="text-4xl font-bold text-[#3818C1] mb-6">0{idx + 1}</div>
+                  <h3 className="text-3xl font-bold mb-4">{story.title}</h3>
+                  <p className="text-lg font-medium text-gray-500 mb-6">{story.subtitle}</p>
+                  <p className="text-[15px] leading-relaxed text-gray-600">
                     {story.desc}
                   </p>
-                  
                 </div>
               </div>
             ))}

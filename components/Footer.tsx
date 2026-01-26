@@ -20,85 +20,92 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer id="contact" className="scroll-mt-20 bg-white border-t border-gray-100">
-      {/* CTA Section - Solid Purple Background */}
-      <div className="relative h-[400px] flex items-center overflow-hidden bg-[#3818C1]">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-white">
-           <h2 className="text-5xl md:text-7xl font-black mb-10 tracking-tighter leading-none">Ready to help us on <br/>our <span className="opacity-60">mission?</span></h2>
-           <button onClick={() => onNavigate('home')} className="inline-block bg-white text-[#3818C1] px-10 py-5 rounded-full font-bold text-lg hover:bg-black hover:text-white transition shadow-2xl transform hover:-translate-y-1">
-             Join Sau Trust
-           </button>
+    <footer id="contact" className="scroll-mt-20 bg-white border-t border-gray-200">
+      {/* CTA Section */}
+      <div className="bg-[#3818C1] py-24 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-8 md:px-16">
+          <div className="grid grid-cols-12 gap-8 items-end">
+            <div className="col-span-12 md:col-span-8">
+              <h2 className="text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] font-bold tracking-tight text-white mb-8">
+                Ready to help us<br />
+                on our mission?
+              </h2>
+            </div>
+            <div className="col-span-12 md:col-span-4 flex justify-end">
+              <button onClick={() => onNavigate('home')} className="bg-white text-[#3818C1] px-8 py-4 text-[11px] font-medium tracking-[0.15em] uppercase hover:bg-black hover:text-white transition-colors">
+                Join Sau Trust
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Main Footer Links */}
-      <div className="bg-white pt-32 pb-16 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
-          <div className="md:col-span-1">
-            <button
-              onClick={() => onNavigate('home')}
-              className="mb-8 hover:opacity-80 transition"
-            >
-              <img
-                src="/sau_trust_logo_-_purple.png"
-                alt="Sau Trust Logo"
-                className="h-16 md:h-24 w-auto object-contain"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  const parent = e.currentTarget.parentElement;
-                  if (parent && !parent.querySelector('.text-fallback')) {
-                    const fallback = document.createElement('div');
-                    fallback.className = "text-fallback flex flex-col leading-none font-black uppercase tracking-tighter text-3xl text-left text-[#3818C1]";
-                    fallback.innerHTML = '<span>Sau</span><span class="text-black">Trust</span>';
-                    parent.appendChild(fallback);
-                  }
-                }}
-              />
-            </button>
-            <p className="text-gray-500 max-w-xs leading-relaxed font-medium">
-              Uplifting single women and families through sustainable, community-driven development across Maharashtra.
-            </p>
+      {/* Main Footer */}
+      <div className="py-16 md:py-24">
+        <div className="max-w-[1400px] mx-auto px-8 md:px-16">
+          <div className="grid grid-cols-12 gap-8 mb-16">
+            <div className="col-span-12 md:col-span-3">
+              <button
+                onClick={() => onNavigate('home')}
+                className="mb-8 hover:opacity-70 transition-opacity"
+              >
+                <img
+                  src="/sau_trust_logo_-_purple.png"
+                  alt="Sau Trust"
+                  className="h-12 w-auto object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    const parent = e.currentTarget.parentElement;
+                    if (parent && !parent.querySelector('.text-fallback')) {
+                      const fallback = document.createElement('div');
+                      fallback.className = "text-fallback text-2xl font-bold tracking-tight text-[#3818C1]";
+                      fallback.textContent = 'SAU TRUST';
+                      parent.appendChild(fallback);
+                    }
+                  }}
+                />
+              </button>
+              <p className="text-[13px] leading-relaxed text-gray-600 max-w-xs">
+                Uplifting single women and families through sustainable, community-driven development.
+              </p>
+            </div>
+
+            <div className="col-span-6 md:col-span-3">
+              <h3 className="text-[11px] font-medium tracking-[0.2em] uppercase text-gray-400 mb-6">Organization</h3>
+              <ul className="space-y-3 text-[13px]">
+                <li><button onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#3818C1] transition-colors">Our Mission</button></li>
+                <li><button onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#3818C1] transition-colors">About Us</button></li>
+                <li><button onClick={(e) => handleLinkClick(e, 'home')} className="hover:text-[#3818C1] transition-colors">Contact</button></li>
+              </ul>
+            </div>
+
+            <div className="col-span-6 md:col-span-3">
+              <h3 className="text-[11px] font-medium tracking-[0.2em] uppercase text-gray-400 mb-6">Activities</h3>
+              <ul className="space-y-3 text-[13px]">
+                <li><button onClick={(e) => handleLinkClick(e, 'home', 'donate')} className="hover:text-[#3818C1] transition-colors">Donate</button></li>
+                <li><button onClick={(e) => handleLinkClick(e, 'activities')} className="hover:text-[#3818C1] transition-colors">Vocational Training</button></li>
+                <li><button onClick={(e) => handleLinkClick(e, 'activities')} className="hover:text-[#3818C1] transition-colors">Success Stories</button></li>
+              </ul>
+            </div>
+
+            <div className="col-span-12 md:col-span-3">
+              <h3 className="text-[11px] font-medium tracking-[0.2em] uppercase text-gray-400 mb-6">Connect</h3>
+              <ul className="space-y-3 text-[13px]">
+                <li><a href="#" className="hover:text-[#3818C1] transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-[#3818C1] transition-colors">Facebook</a></li>
+                <li><a href="#" className="hover:text-[#3818C1] transition-colors">LinkedIn</a></li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h3 className="font-bold text-black mb-8 text-sm uppercase tracking-widest opacity-40">Organization</h3>
-            <ul className="space-y-4 text-gray-900 font-bold">
-              <li><button onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#3818C1] transition-colors">Our mission</button></li>
-              <li><button onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#3818C1] transition-colors">Board of Directors</button></li>
-              <li><button onClick={(e) => handleLinkClick(e, 'home')} className="hover:text-[#3818C1] transition-colors">Contact us</button></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-bold text-black mb-8 text-sm uppercase tracking-widest opacity-40">Our activities</h3>
-            <ul className="space-y-4 text-gray-900 font-bold">
-              <li><button onClick={(e) => handleLinkClick(e, 'home', 'donate')} className="hover:text-[#3818C1] transition-colors">Donate</button></li>
-              <li><button onClick={(e) => handleLinkClick(e, 'activities')} className="hover:text-[#3818C1] transition-colors">Vocational Training</button></li>
-              <li><button onClick={(e) => handleLinkClick(e, 'activities')} className="hover:text-[#3818C1] transition-colors">Success Stories</button></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold text-black mb-8 text-sm uppercase tracking-widest opacity-40">Connect</h3>
-            <ul className="space-y-4 text-gray-900 font-bold">
-              <li><a href="#" className="hover:text-[#3818C1] transition-colors">Instagram</a></li>
-              <li><a href="#" className="hover:text-[#3818C1] transition-colors">Facebook</a></li>
-              <li><a href="#" className="hover:text-[#3818C1] transition-colors">LinkedIn</a></li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="max-w-7xl mx-auto border-t border-gray-100 pt-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-8 text-sm text-gray-400 font-medium">
-            <span className="text-black font-bold">Sau Trust © 2025</span>
-            <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
-          </div>
-
-          <div className="text-xs text-gray-400 font-medium text-center md:text-right">
-             All donations are tax deductible under Section 80G.<br/>
-             Empowering women, strengthening communities.
+          <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-[11px] text-gray-400">
+              © 2025 Sau Trust. All rights reserved.
+            </div>
+            <div className="flex gap-8 text-[11px] text-gray-400">
+              <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-black transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>
